@@ -10,18 +10,28 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1 class="display-2 mb-4">Weekday Calculator</h1>
-            <p>This site generates random dates within a set range so you can practice calculating the weekday for an arbitrary date in your head. There are a number of different methods for doing this, some of which are detailed here in this <a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week">Wikipedia article on the topic</a>. One popular method is known as the <a href="https://www.timeanddate.com/date/doomsday-weekday.html">Doomsday algorithm</a> and there is another method which involves memorising codes for each year, detailed <a href="https://www.nelsondellis.com/memorize-the-calendar">here by memory expert Nelson Dellis</a>.</p>
+            <div class="mt-4 mb-4">
+                <h1 class="display-2">Weekday Calculator</h1>
+            </div>
+            <div class="mb-4">
+                <p class="lead">This site generates random dates within a set range so you can practice calculating the weekday for an arbitrary date in your head. There are a number of different methods for doing this, some of which are detailed here in this <a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week" rel="noopener noreferrer" target="_blank">Wikipedia article on the topic</a>. One popular method is known as the <a href="https://www.timeanddate.com/date/doomsday-weekday.html" rel="noopener noreferrer" target="_blank">Doomsday algorithm</a> and there is another method which involves memorising codes for each year, <a href="https://www.nelsondellis.com/memorize-the-calendar" rel="noopener noreferrer" target="_blank">detailed here by memory expert Nelson Dellis</a>.</p>
+            </div>
             <form action="calculate/index.html" method="get">
                 <div class="mb-4">
                     <legend class="heading-2">Date range</legend>
-                    <div class="mb-2">
-                        <label for="earliest_date">Earliest date</label>
-                        <input type="date" name="earliest_date" id="earliest_date" value="1600-01-01">
-                    </div>
-                    <div class="mb-2">
-                        <label for="latest_date">Latest date</label>
-                        <input type="date" name="latest_date" id="latest_date" value="2199-12-31">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label for="earliest_date">Earliest date</label>
+                                <input type="date" class="form-control"  name="earliest_date" id="earliest_date" value="1600-01-01">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-2">
+                                <label for="latest_date">Latest date</label>
+                                <input type="date" class="form-control"  name="latest_date" id="latest_date" value="2199-12-31">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <input type="submit" value="Start" class="btn btn-primary btn-lg">
