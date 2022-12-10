@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
     <title>Weekday Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <h1>Calculate the weekday</h1>
-        <div class="mb-4">
-            <div class="display-3">Date: <span class="js-date"></span></div>
-            <div class="display-4">Weekday: <span class="js-weekday"></span></div>
+        <div class="row">
+            <h1 class="display-2">Weekday Calculator</h1>
+            <form action="calculate/index.html" method="get">
+                    <legend class="heading-2">Date range</legend>
+                    <div>
+                        <label for="earliest_date">Earliest date</label>
+                        <input type="date" name="earliest_date" id="earliest_date" value="1600-01-01">
+                    </div>
+                    <div>
+                        <label for="latest_date">Latest date</label>
+                        <input type="date" name="latest_date" id="latest_date" value="2199-12-31">
+                    </div>
+                <input type="submit" value="Start" class="btn btn-primary btn-lg">
+            </form>
         </div>
-        <button class="btn btn-primary btn-lg mb-2 js-generate-date">Generate date</button>
-        <button class="btn btn-success btn-lg js-show-weekday">Show weekday</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </body>
 </html>
