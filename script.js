@@ -14,10 +14,13 @@ function generateDate() {
     document.querySelector('.js-date').textContent = `${randomDate.getDate()} ${globals.month[randomDate.getMonth()]}, ${randomDate.getFullYear()}`;
     document.querySelector('.js-weekday').textContent = '';
     document.querySelector('.js-show-weekday').style.display = 'block';
+    document.querySelector('.js-generate-date').style.display = 'none';
 }
 
 function showWeekday(date) {
     document.querySelector('.js-weekday').textContent = globals.weekday[date.getDay()];
+    document.querySelector('.js-generate-date').style.display = 'block';
+    document.querySelector('.js-show-weekday').style.display = 'none';
 }
 
 document.querySelector('.js-generate-date').addEventListener('click', generateDate);
